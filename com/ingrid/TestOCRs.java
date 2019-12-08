@@ -3,18 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ocrcomparison;
+package com.ingrid;
 
 import com.asprise.ocr.Ocr;
 import java.awt.Image;
 import java.io.File;
 import java.io.FileOutputStream;
-import java.net.URI;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
 
 /**
@@ -33,6 +30,8 @@ public class TestOCRs extends javax.swing.JFrame {
     public TestOCRs() {
         initComponents();
         instance = new Tesseract();
+        instance.setDatapath("./lib/Tess4J");
+        instance.setLanguage("spa");
         Ocr.setUp();
         instanceAs = new Ocr();
         instanceAs.startEngine("eng", Ocr.SPEED_FASTEST);
