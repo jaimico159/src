@@ -1,4 +1,4 @@
-package com.aaron;
+package com.milagros;
 import org.opencv.core.Mat;
 import org.opencv.core.Point;
 import org.opencv.core.Size;
@@ -6,7 +6,7 @@ import org.opencv.imgproc.Imgproc;
 import org.opencv.imgcodecs.Imgcodecs;
 
 public class ProcessImage {
-	public ProcessImage(){
+	ProcessImage(){
 		
 	}
 	
