@@ -104,12 +104,13 @@ public class Front extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         textArea1.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
+        textArea1.setName("outputTextArea"); // NOI18N
 
         saveTextButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
         saveTextButton.setLabel("Guardar Texto");
         saveTextButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveTextButtonActionPerformed(evt);
+                saveTextActionPerformed(evt);
             }
         });
 
@@ -145,11 +146,11 @@ public class Front extends javax.swing.JFrame {
         LoadImageButton.setLabel("Cargar Imagen");
         LoadImageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoadImageButtonActionPerformed(evt);
+                uploadImageActionPerformed(evt);
             }
         });
 
-        applyOCRButton.setActionCommand("applyOCRButton");
+        applyOCRButton.setActionCommand("applyOCRActionPerformed");
         applyOCRButton.setBackground(new java.awt.Color(102, 102, 255));
         applyOCRButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
         applyOCRButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -162,9 +163,11 @@ public class Front extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel2.setName("repairedImage"); // NOI18N
 
         jLabel3.setBackground(new java.awt.Color(204, 204, 204));
         jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel3.setName("deterioratedImage"); // NOI18N
 
         LoadImageButton1.setBackground(new java.awt.Color(102, 102, 255));
         LoadImageButton1.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
@@ -203,7 +206,7 @@ public class Front extends javax.swing.JFrame {
         LoadImageButton4.setLabel("Aplicar todos");
         LoadImageButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoadImageButton4ActionPerformed(evt);
+                applyAllActionPerformed(evt);
             }
         });
 
@@ -220,7 +223,9 @@ public class Front extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Grado de cierre morfologico");
 
+        jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField1.setName("gradeMorphological"); // NOI18N
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -253,13 +258,14 @@ public class Front extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 14, Short.MAX_VALUE)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(LoadImageButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LoadImageButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LoadImageButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LoadImageButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                            .addComponent(LoadImageButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(LoadImageButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(LoadImageButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(LoadImageButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(LoadImageButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(LoadImageButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                                .addComponent(LoadImageButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(LoadImageButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
@@ -278,7 +284,7 @@ public class Front extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(21, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(LoadImageButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -286,21 +292,21 @@ public class Front extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LoadImageButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(LoadImageButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(LoadImageButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LoadImageButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(LoadImageButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(applyOCRButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LoadImageButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10))
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -340,7 +346,7 @@ public class Front extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-  private void saveTextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveTextButtonActionPerformed
+  private void saveTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveTextActionPerformed
     if(chooser.showDialog(null, "Guardar")==JFileChooser.APPROVE_OPTION){
       file=chooser.getSelectedFile();
       if(file.getName().endsWith("txt")){
@@ -356,7 +362,7 @@ public class Front extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Guardar Documento de texto"); 
       }
     }
-  }//GEN-LAST:event_saveTextButtonActionPerformed
+  }//GEN-LAST:event_saveTextActionPerformed
 
   public String saveFile(File archivo, String document){
     String mensaje= null;
@@ -456,7 +462,7 @@ public class Front extends javax.swing.JFrame {
     }
   }
 
-  private void LoadImageButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadImageButtonActionPerformed
+  private void uploadImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadImageActionPerformed
     //chooser.setCurrentDirectory(new File(new URI("C:/Users/JeysonGonzales/D));
     //FileNameExtensionFilter filter = new FileNameExtensionFilter("*.Images", "png");
     //chooser.addChoosableFileFilter(filter);
@@ -465,7 +471,7 @@ public class Front extends javax.swing.JFrame {
     String filepath = file.getAbsolutePath();
     LoadImageButton.setLabel(filepath);
     jLabel3.setIcon(ResizeImage(filepath));
-  }//GEN-LAST:event_LoadImageButtonActionPerformed
+  }//GEN-LAST:event_uploadImageActionPerformed
 
     private void gaussianBlurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gaussianBlurActionPerformed
         // TODO add your handling code here:
@@ -479,9 +485,9 @@ public class Front extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_morphologicalClosingActionPerformed
 
-    private void LoadImageButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadImageButton4ActionPerformed
+    private void applyAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyAllActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_LoadImageButton4ActionPerformed
+    }//GEN-LAST:event_applyAllActionPerformed
 
     private void erodeAndDilateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_erodeAndDilateActionPerformed
         // TODO add your handling code here:
