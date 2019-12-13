@@ -157,7 +157,7 @@ public class Front extends javax.swing.JFrame {
         applyOCRButton.setLabel("Aplicar OCR");
         applyOCRButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                applyOCRButtonActionPerformed(evt);
+                applyOCRActionPerformed(evt);
             }
         });
 
@@ -386,7 +386,7 @@ public class Front extends javax.swing.JFrame {
     return image;
   }
 
-  private void applyOCRButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyOCRButtonActionPerformed
+  private void applyOCRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_applyOCRActionPerformed
     try { 
 
       ProcessImage PI = new ProcessImage();
@@ -436,7 +436,7 @@ public class Front extends javax.swing.JFrame {
     } catch (Exception e) {
       System.err.println(e.getMessage());
     }
-  }//GEN-LAST:event_applyOCRButtonActionPerformed
+  }//GEN-LAST:event_applyOCRActionPerformed
   
   public static void applyMorphologicalClosing(String imagePath, String pathDestiny) {
     MarvinImage image = MarvinImageIO.loadImage(imagePath);
