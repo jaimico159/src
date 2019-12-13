@@ -9,7 +9,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 public class ProcessImage {
 	ProcessImage(){}
 	
-	public Mat applyGrayscale(String path){
+	Mat applyGrayscale(String path){
 		Mat imageProcessing = Imgcodecs.imread(path, Imgcodecs.IMREAD_GRAYSCALE);		
 		Imgproc.threshold(imageProcessing, imageProcessing, 255, 255, Imgproc.THRESH_OTSU);
 		Imgcodecs.imwrite(path, imageProcessing);
