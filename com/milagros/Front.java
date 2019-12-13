@@ -82,18 +82,18 @@ public class Front extends javax.swing.JFrame {
         textArea1 = new java.awt.TextArea();
         saveTextButton = new java.awt.Button();
         jPanel3 = new javax.swing.JPanel();
-        LoadImageButton = new java.awt.Button();
+        uploadImageButton = new java.awt.Button();
         applyOCRButton = new java.awt.Button();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        LoadImageButton1 = new java.awt.Button();
-        LoadImageButton2 = new java.awt.Button();
-        LoadImageButton3 = new java.awt.Button();
-        LoadImageButton4 = new java.awt.Button();
-        LoadImageButton5 = new java.awt.Button();
+        repairedImageLabel = new javax.swing.JLabel();
+        originalImageLabel = new javax.swing.JLabel();
+        gaussianBlurButton = new java.awt.Button();
+        grayScaleButton = new java.awt.Button();
+        morphologicalClosingButton = new java.awt.Button();
+        applyAllButton = new java.awt.Button();
+        erodeAndDilateButton = new java.awt.Button();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        LoadImageButton6 = new java.awt.Button();
+        gradeInputtext = new javax.swing.JTextField();
+        binarizationButton = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reconocimiento de Caracteres | ICR");
@@ -140,11 +140,11 @@ public class Front extends javax.swing.JFrame {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        LoadImageButton.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton.setLabel("Cargar Imagen");
-        LoadImageButton.addActionListener(new java.awt.event.ActionListener() {
+        uploadImageButton.setBackground(new java.awt.Color(102, 102, 255));
+        uploadImageButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        uploadImageButton.setForeground(new java.awt.Color(255, 255, 255));
+        uploadImageButton.setLabel("Cargar Imagen");
+        uploadImageButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uploadImageActionPerformed(evt);
             }
@@ -161,60 +161,60 @@ public class Front extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel2.setName("repairedImage"); // NOI18N
+        repairedImageLabel.setBackground(new java.awt.Color(204, 204, 204));
+        repairedImageLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        repairedImageLabel.setName("repairedImageLabel"); // NOI18N
 
-        jLabel3.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jLabel3.setName("deterioratedImage"); // NOI18N
+        originalImageLabel.setBackground(new java.awt.Color(204, 204, 204));
+        originalImageLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        originalImageLabel.setName("deterioratedImage"); // NOI18N
 
-        LoadImageButton1.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton1.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton1.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton1.setLabel("Desenfoque gaussiano");
-        LoadImageButton1.addActionListener(new java.awt.event.ActionListener() {
+        gaussianBlurButton.setBackground(new java.awt.Color(102, 102, 255));
+        gaussianBlurButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        gaussianBlurButton.setForeground(new java.awt.Color(255, 255, 255));
+        gaussianBlurButton.setLabel("Desenfoque gaussiano");
+        gaussianBlurButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 gaussianBlurActionPerformed(evt);
             }
         });
 
-        LoadImageButton2.setActionCommand("grayScaleActionPerformed");
-        LoadImageButton2.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton2.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton2.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton2.setLabel("Escala de grises");
-        LoadImageButton2.addActionListener(new java.awt.event.ActionListener() {
+        grayScaleButton.setActionCommand("grayScaleActionPerformed");
+        grayScaleButton.setBackground(new java.awt.Color(102, 102, 255));
+        grayScaleButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        grayScaleButton.setForeground(new java.awt.Color(255, 255, 255));
+        grayScaleButton.setLabel("Escala de grises");
+        grayScaleButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 grayScaleActionPerformed(evt);
             }
         });
 
-        LoadImageButton3.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton3.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton3.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton3.setLabel("Cierre Morfológico");
-        LoadImageButton3.addActionListener(new java.awt.event.ActionListener() {
+        morphologicalClosingButton.setBackground(new java.awt.Color(102, 102, 255));
+        morphologicalClosingButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        morphologicalClosingButton.setForeground(new java.awt.Color(255, 255, 255));
+        morphologicalClosingButton.setLabel("Cierre Morfológico");
+        morphologicalClosingButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 morphologicalClosingActionPerformed(evt);
             }
         });
 
-        LoadImageButton4.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton4.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton4.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton4.setLabel("Aplicar todos");
-        LoadImageButton4.addActionListener(new java.awt.event.ActionListener() {
+        applyAllButton.setBackground(new java.awt.Color(102, 102, 255));
+        applyAllButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        applyAllButton.setForeground(new java.awt.Color(255, 255, 255));
+        applyAllButton.setLabel("Aplicar todos");
+        applyAllButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 applyAllActionPerformed(evt);
             }
         });
 
-        LoadImageButton5.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton5.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton5.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton5.setLabel("Erosión y Dilación");
-        LoadImageButton5.addActionListener(new java.awt.event.ActionListener() {
+        erodeAndDilateButton.setBackground(new java.awt.Color(102, 102, 255));
+        erodeAndDilateButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        erodeAndDilateButton.setForeground(new java.awt.Color(255, 255, 255));
+        erodeAndDilateButton.setLabel("Erosión y Dilación");
+        erodeAndDilateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 erodeAndDilateActionPerformed(evt);
             }
@@ -223,20 +223,20 @@ public class Front extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Grado de cierre morfologico");
 
-        jTextField1.setEditable(false);
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTextField1.setName("gradeMorphological"); // NOI18N
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        gradeInputtext.setEditable(false);
+        gradeInputtext.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        gradeInputtext.setName("gradeMorphological"); // NOI18N
+        gradeInputtext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                gradeInputtextActionPerformed(evt);
             }
         });
 
-        LoadImageButton6.setBackground(new java.awt.Color(102, 102, 255));
-        LoadImageButton6.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
-        LoadImageButton6.setForeground(new java.awt.Color(255, 255, 255));
-        LoadImageButton6.setLabel("Binarización");
-        LoadImageButton6.addActionListener(new java.awt.event.ActionListener() {
+        binarizationButton.setBackground(new java.awt.Color(102, 102, 255));
+        binarizationButton.setFont(new java.awt.Font("Dialog", 0, 16)); // NOI18N
+        binarizationButton.setForeground(new java.awt.Color(255, 255, 255));
+        binarizationButton.setLabel("Binarización");
+        binarizationButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 binarizationActionPerformed(evt);
             }
@@ -250,24 +250,24 @@ public class Front extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(21, 21, 21)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(originalImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(LoadImageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(uploadImageButton, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(101, 101, 101)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(0, 14, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(LoadImageButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(LoadImageButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(LoadImageButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(LoadImageButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
-                                .addComponent(LoadImageButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(LoadImageButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(applyAllButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(morphologicalClosingButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(erodeAndDilateButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(gaussianBlurButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                                .addComponent(grayScaleButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(binarizationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(25, 25, 25)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(repairedImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(27, 27, 27)
@@ -277,7 +277,7 @@ public class Front extends javax.swing.JFrame {
                         .addGap(105, 105, 105))))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gradeInputtext, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(409, 409, 409))
         );
         jPanel3Layout.setVerticalGroup(
@@ -286,26 +286,26 @@ public class Front extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(LoadImageButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(grayScaleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LoadImageButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(gaussianBlurButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LoadImageButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(erodeAndDilateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LoadImageButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(binarizationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LoadImageButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(morphologicalClosingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(LoadImageButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(applyAllButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(repairedImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(originalImageLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(applyOCRButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LoadImageButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(uploadImageButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(gradeInputtext, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20))
         );
 
@@ -381,7 +381,7 @@ public class Front extends javax.swing.JFrame {
   public ImageIcon ResizeImage(String filepath) {
     ImageIcon myImage = new ImageIcon(filepath);
     Image img = myImage.getImage();
-    Image newImg = img.getScaledInstance(jLabel2.getWidth(), jLabel2.getHeight(), Image.SCALE_SMOOTH);
+    Image newImg = img.getScaledInstance(repairedImageLabel.getWidth(), repairedImageLabel.getHeight(), Image.SCALE_SMOOTH);
     ImageIcon image = new ImageIcon(newImg);
     return image;
   }
@@ -429,8 +429,8 @@ public class Front extends javax.swing.JFrame {
       String textproc =resultproc;
       textArea1.setText("PROCESADO:\n\n"+textproc+"\n\nSOLAMENTE OCR:\n\n"+text);
       
-      LoadImageButton.setLabel(finalImage.getAbsolutePath());
-      jLabel2.setIcon(ResizeImage(finalImage.getAbsolutePath()));
+      uploadImageButton.setLabel(finalImage.getAbsolutePath());
+      repairedImageLabel.setIcon(ResizeImage(finalImage.getAbsolutePath()));
       
 
     } catch (Exception e) {
@@ -469,8 +469,8 @@ public class Front extends javax.swing.JFrame {
     chooser.showOpenDialog(null);
     file = chooser.getSelectedFile();
     String filepath = file.getAbsolutePath();
-    LoadImageButton.setLabel(filepath);
-    jLabel3.setIcon(ResizeImage(filepath));
+    uploadImageButton.setLabel(filepath);
+    originalImageLabel.setIcon(ResizeImage(filepath));
   }//GEN-LAST:event_uploadImageActionPerformed
 
     private void gaussianBlurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gaussianBlurActionPerformed
@@ -493,9 +493,9 @@ public class Front extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_erodeAndDilateActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void gradeInputtextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gradeInputtextActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_gradeInputtextActionPerformed
 
     private void binarizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_binarizationActionPerformed
         // TODO add your handling code here:
@@ -537,23 +537,23 @@ public class Front extends javax.swing.JFrame {
   }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private java.awt.Button LoadImageButton;
-    private java.awt.Button LoadImageButton1;
-    private java.awt.Button LoadImageButton2;
-    private java.awt.Button LoadImageButton3;
-    private java.awt.Button LoadImageButton4;
-    private java.awt.Button LoadImageButton5;
-    private java.awt.Button LoadImageButton6;
+    private java.awt.Button applyAllButton;
     private java.awt.Button applyOCRButton;
+    private java.awt.Button binarizationButton;
+    private java.awt.Button erodeAndDilateButton;
+    private java.awt.Button gaussianBlurButton;
+    private javax.swing.JTextField gradeInputtext;
+    private java.awt.Button grayScaleButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextField1;
+    private java.awt.Button morphologicalClosingButton;
+    private javax.swing.JLabel originalImageLabel;
+    private javax.swing.JLabel repairedImageLabel;
     private java.awt.Button saveTextButton;
     private java.awt.TextArea textArea1;
+    private java.awt.Button uploadImageButton;
     // End of variables declaration//GEN-END:variables
   public Button getApplyProcessingBeforeOCR() {
     return applyProcessingBeforeOCR;

@@ -145,11 +145,11 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                              <Component id="jLabel3" min="-2" pref="365" max="-2" attributes="0"/>
+                              <Component id="originalImageLabel" min="-2" pref="365" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LoadImageButton" min="-2" pref="138" max="-2" attributes="0"/>
+                              <Component id="uploadImageButton" min="-2" pref="138" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -158,16 +158,16 @@
                               <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="LoadImageButton4" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="LoadImageButton3" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="LoadImageButton5" alignment="1" max="32767" attributes="0"/>
-                                      <Component id="LoadImageButton1" alignment="1" pref="215" max="32767" attributes="0"/>
-                                      <Component id="LoadImageButton2" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="applyAllButton" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="morphologicalClosingButton" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="erodeAndDilateButton" alignment="1" max="32767" attributes="0"/>
+                                      <Component id="gaussianBlurButton" alignment="1" pref="215" max="32767" attributes="0"/>
+                                      <Component id="grayScaleButton" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="LoadImageButton6" min="-2" pref="215" max="-2" attributes="0"/>
+                                  <Component id="binarizationButton" min="-2" pref="215" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" pref="332" max="-2" attributes="0"/>
+                              <Component id="repairedImageLabel" min="-2" pref="332" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -181,7 +181,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="132" max="-2" attributes="0"/>
+                      <Component id="gradeInputtext" min="-2" pref="132" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="409" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -192,36 +192,36 @@
                       <EmptySpace pref="21" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="LoadImageButton2" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="grayScaleButton" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LoadImageButton1" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="gaussianBlurButton" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LoadImageButton5" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="erodeAndDilateButton" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LoadImageButton6" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="binarizationButton" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LoadImageButton3" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="morphologicalClosingButton" min="-2" pref="37" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="LoadImageButton4" min="-2" pref="37" max="-2" attributes="0"/>
+                              <Component id="applyAllButton" min="-2" pref="37" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel2" min="-2" pref="253" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="253" max="-2" attributes="0"/>
+                          <Component id="repairedImageLabel" min="-2" pref="253" max="-2" attributes="0"/>
+                          <Component id="originalImageLabel" min="-2" pref="253" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="26" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel1" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="applyOCRButton" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
-                          <Component id="LoadImageButton" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
+                          <Component id="uploadImageButton" alignment="1" min="-2" pref="37" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="27" max="-2" attributes="0"/>
+                      <Component id="gradeInputtext" min="-2" pref="27" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="java.awt.Button" name="LoadImageButton">
+            <Component class="java.awt.Button" name="uploadImageButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -256,7 +256,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="applyOCRActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="repairedImageLabel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -266,10 +266,10 @@
                     <LineBorder/>
                   </Border>
                 </Property>
-                <Property name="name" type="java.lang.String" value="repairedImage" noResource="true"/>
+                <Property name="name" type="java.lang.String" value="repairedImageLabel" noResource="true"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="originalImageLabel">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -282,7 +282,7 @@
                 <Property name="name" type="java.lang.String" value="deterioratedImage" noResource="true"/>
               </Properties>
             </Component>
-            <Component class="java.awt.Button" name="LoadImageButton1">
+            <Component class="java.awt.Button" name="gaussianBlurButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -299,7 +299,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gaussianBlurActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.Button" name="LoadImageButton2">
+            <Component class="java.awt.Button" name="grayScaleButton">
               <Properties>
                 <Property name="actionCommand" type="java.lang.String" value="grayScaleActionPerformed"/>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -317,7 +317,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="grayScaleActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.Button" name="LoadImageButton3">
+            <Component class="java.awt.Button" name="morphologicalClosingButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -334,7 +334,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="morphologicalClosingActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.Button" name="LoadImageButton4">
+            <Component class="java.awt.Button" name="applyAllButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -351,7 +351,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="applyAllActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.Button" name="LoadImageButton5">
+            <Component class="java.awt.Button" name="erodeAndDilateButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
@@ -376,7 +376,7 @@
                 <Property name="text" type="java.lang.String" value="Grado de cierre morfologico"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="gradeInputtext">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -385,10 +385,10 @@
                 <Property name="name" type="java.lang.String" value="gradeMorphological" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="gradeInputtextActionPerformed"/>
               </Events>
             </Component>
-            <Component class="java.awt.Button" name="LoadImageButton6">
+            <Component class="java.awt.Button" name="binarizationButton">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="66" red="66" type="rgb"/>
