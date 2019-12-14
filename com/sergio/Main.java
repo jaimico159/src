@@ -1,31 +1,33 @@
-package com.sergio;
 import marvin.io.*;
 import marvin.image.*;
 import marvin.math.*;
 import static  marvin.MarvinPluginCollection.*;
+
 import marvin.color.MarvinColorModelConverter;
 
+public class Example {
 
-public class Main {
-
-    public static void main(String[] args) {
-	        String firstPath = "C:\\Users\\sergi\\Desktop\\broken4.jpeg";
-	        String destinyPath = "C:\\Users\\sergi\\Desktop\\output5.png";
-	    	applyMorphologicalClosing(firstPath, destinyPath);
+	
+	    public static void main(String[] args) {
+	        String firstPath = "~/Desktop/temp.png";
+	        String destinyPath = "~/Desktop/temp1.png";
+	    	applyMorphologicalClosing(firstPath, destinyPath, 50);
 	    	
 	        System.exit(0);
 	    }
 	    
 	    /**
 	     * By Sergio Laureano
-	     * @param imagePath
+	     * @param pathSource
 	     * @param pathDestiny
 	     */
-	    public static void applyMorphologicalClosing(String imagePath, String pathDestiny) {
-	    	MarvinImage image = MarvinImageIO.loadImage(imagePath);
+	    public static void applyMorphologicalClosing(String pathSource, String pathDestiny, int degree) {
+	    	MarvinImage image = MarvinImageIO.loadImage(pathSource);
 	        image = MarvinColorModelConverter.rgbToBinary(image, 127);
-	        morphologicalClosing(image.clone(), image, MarvinMath.getTrueMatrix(60, 60));
+	        morphologicalClosing(image.clone(), image, MarvinMath.getTrueMatrix(degree, degree));
 	        MarvinImageIO.saveImage(image, pathDestiny);
 	    }
-
+	    
+	    
 }
+
