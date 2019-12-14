@@ -1,3 +1,5 @@
+package com.sergio;
+
 import marvin.io.*;
 import marvin.image.*;
 import marvin.math.*;
@@ -5,7 +7,7 @@ import static  marvin.MarvinPluginCollection.*;
 
 import marvin.color.MarvinColorModelConverter;
 
-public class Example {
+public class Main {
 
 	
 	    public static void main(String[] args) {
