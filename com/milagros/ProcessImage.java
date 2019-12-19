@@ -37,8 +37,6 @@ public class ProcessImage {
       Imgproc.dilate(image, image, new Mat());
       Imgproc.threshold(image, image, 0, 255, Imgproc.THRESH_OTSU);
     }
-    for(int i = 1; i < 2; i++)
-      Imgproc.dilate(image, image, new Mat());
     Imgcodecs.imwrite(path, image);
     return image;
   }
