@@ -8,7 +8,7 @@ import org.opencv.imgcodecs.Imgcodecs;
 public class ProcessImage {
 	ProcessImage(){}
 	
-	Mat applyGrayscale(String path){
+	public Mat applyGrayscale(String path){
 		Mat imageProcessing = Imgcodecs.imread(path, Imgcodecs.IMREAD_GRAYSCALE);		
 		Imgproc.threshold(imageProcessing, imageProcessing, 255, 255, Imgproc.THRESH_OTSU);
 		Imgcodecs.imwrite(path, imageProcessing);
@@ -30,8 +30,6 @@ public class ProcessImage {
 			Imgproc.dilate(image, image, new Mat());
 			Imgproc.threshold(image, image, 0, 255, Imgproc.THRESH_OTSU);
 		}
-		for(int i = 1; i < 2; i++)
-			Imgproc.dilate(image, image, new Mat());
 		Imgcodecs.imwrite(path, image);
 		return image;
 	}
@@ -70,8 +68,7 @@ public class ProcessImage {
 			Imgproc.threshold(imageProcessing, imageProcessing, 0, 255, Imgproc.THRESH_OTSU);
 			//Imgproc.erode(srcImage, srcImage, new Mat());
 		}
-		for(int i = 1; i < 2; i++)
-			Imgproc.dilate(imageProcessing, imageProcessing, new Mat());
+		
 		Imgcodecs.imwrite(imagePathOutput, imageProcessing);
 	}
 
@@ -102,10 +99,9 @@ public class ProcessImage {
 			Imgproc.threshold(imageProcessing, imageProcessing, 0, 255, Imgproc.THRESH_OTSU);
 			Imgproc.dilate(imageProcessing, imageProcessing, new Mat());
 			Imgproc.threshold(imageProcessing, imageProcessing, 0, 255, Imgproc.THRESH_OTSU);
-			//Imgproc.erode(srcImage, srcImage, new Mat());
+			//Imgproc.erode(imageProcessing, imageProcessing, new Mat());		
 		}
-		for(int i = 1; i < 2; i++)
-			Imgproc.dilate(imageProcessing, imageProcessing, new Mat());
+
 		Imgcodecs.imwrite("D:/preproces/prueba3.png", imageProcessing);
 
 		//Binarizacion de imagen
@@ -135,10 +131,9 @@ public class ProcessImage {
 			Imgproc.threshold(imageProcessing, imageProcessing, 0, 255, Imgproc.THRESH_OTSU);
 			Imgproc.dilate(imageProcessing, imageProcessing, new Mat());
 			Imgproc.threshold(imageProcessing, imageProcessing, 0, 255, Imgproc.THRESH_OTSU);
-			//Imgproc.erode(srcImage, srcImage, new Mat());
+			//Imgproc.erode(imageProcessing, imageProcessing, new Mat());
 		}
-		for(int i = 1; i < 2; i++)
-			Imgproc.dilate(imageProcessing, imageProcessing, new Mat());
+		
 		Imgcodecs.imwrite("D:/preproces/prueba3.png", imageProcessing);
 
 		//Binarizacion de imagen
